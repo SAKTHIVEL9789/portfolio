@@ -1,0 +1,587 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bluec{
+    color:  #0073e6;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between LinkedIn and nav */
+    align-items: center; /* Center items vertically */
+    background: #A0DEFF; /* Your header background color */
+    color: #f4e8e8;
+    padding: 10px 20px; /* Added padding for better appearance */
+}
+
+.linkedin-profile {
+    margin-right: auto; /* Pushes the LinkedIn link to the left */
+}
+
+.linkedin-profile a {
+    text-decoration: none;
+}
+
+.linkedin-icon {
+    width: 30px; /* Set the size of the LinkedIn icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p, ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Home Section */
+#home {
+    background-image: url(/images/pexels-goumbik-1420701.jpg);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the container */
+    background-size: cover; /* Scales the image to cover the entire container */
+    height: 100vh; /* Set the height of the section */
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0028f1;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    max-width: 100%;
+   
+    padding-left: 15%;
+    font-style: italic;
+}
+
+.home-container h1 {
+    font-size: 35px;
+}
+
+.home-container h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.home-image {
+    max-width: 30%;
+    text-align: center;
+}
+
+.home-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 50%; /* Optional: For a circular profile picture */
+    border: 2px solid #fff; /* Optional: Adds a white border around the image */
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+.me-text{
+    color: #ff5733;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    color: #0073e6;
+    font-size: 30px;
+    
+}
+
+.highlight-name {
+    color: #ff5733; /* Different color for Sakthivel */
+}
+
+.objective-text {
+    font-size: 19px; /* Adjust font size as needed */
+    margin: 20px 0; /* Add margin for spacing */
+    color: #333; /* Default color */
+  
+}
+/* Personal Info Container */
+.personal-info-container {
+    display: flex;
+    justify-content: center; /* Center the entire container */
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 20px;
+}
+
+/* Left Info */
+.left-info {
+    width: 45%; /* Left side takes 45% of the container width */
+    text-align: left; /* Center text for the left info */
+}
+
+.left-info .personal-info {
+    padding-left: 0; /* Remove padding for better centering */
+}
+
+/* Right Info */
+.right-info {
+    width: 45%; /* Right side takes 45% of the container width */
+    text-align: left; /* Left-align text for the right info */
+}
+
+/* Personal Info Styling */
+.personal-info {
+    list-style-type: none;
+    padding: 0;
+    font-size: 30px;
+}
+
+.personal-info li {
+    margin-bottom: 30px;
+}
+
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.resume-button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Home Section */
+    .home-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .home-container h1 {
+        font-size: 28px;
+    }
+
+    .home-container h2 {
+        font-size: 20px;
+    }
+
+    .home-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* About Section */
+    #about {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .personal-info-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    
+    .left-info, .right-info {
+        width: 100%; /* Full width on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+}
+/* Education Section */
+#education {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light background */
+    text-align: center; /* Center align the text */
+}
+
+#education h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0073e6; /* Education heading color */
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased spacing between cards */
+}
+
+.education-card {
+    background-color: white; /* Card background */
+    border: 1px solid #0073e6; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    width: 250px; /* Fixed width for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.education-card:hover {
+    transform: translateY(-10px); /* Increased lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.education-card h3 {
+    color: #0073e6; /* Color for education degree */
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    font-size: 16px; /* Font size for details */
+    color: #333; /* Color for text */
+}
+/* Skills Section */
+#skills {
+    text-co
+    padding: 40px 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px; /* Increased margin for spacing */
+    flex-basis: 30%;
+    transition: transform 0.7s ease, background-color 0.7s ease, color 0.7s ease, box-shadow 0.7s ease; /* Increased duration */
+}
+
+.skill-card:hover {
+    transform: translateY(-15px) rotate(3deg) scale(1.05); /* More pronounced hover effect */
+    background-color: #d1e2f3; /* Change to a different color on hover */
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Individual Skill Card Colors */
+.python-card {
+    background-color: #add8e6; /* Light Blue */
+}
+
+.sql-card {
+    background-color: #b2d4ff; /* Light Sky Blue */
+}
+
+.html-css-card {
+    background-color: #b0e0e6; /* Powder Blue */
+}
+
+.js-card {
+    background-color: #87cefa; /* Light Sky Blue */
+}
+
+.power-bi-card {
+    background-color: #a4c8e1; /* Light Steel Blue */
+}
+
+.ibm-watson-card {
+    background-color: #cce5ff; /* Light Blue */
+}
+
+.cognos-card {
+    background-color: #e0f7fa; /* Light Cyan */
+}
+
+.ms-office-card {
+    background-color: #d0e1f9; /* Very Light Blue */
+}
+
+.star-uml-card {
+    background-color: #c1d3e0; /* Soft Light Blue */
+}
+
+/* Projects Section */
+/* Projects Section */
+#projects {
+    padding: 40px 20px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    flex-basis: 30%;
+    text-align: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #0073e6;
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsive Design for Projects Section */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+/* Certifications Section */
+#certifications {
+    padding: 40px 20px;
+}
+
+.certifications-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.certification-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px; /* Increased margin for spacing */
+    flex-basis: 30%; /* Each card takes up 30% of the container */
+    text-align: center; /* Center text */
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+.certification-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Slight upward movement and scaling on hover */
+    background-color: #0073e6; /* Change to a different color on hover */
+    color: #fff;
+}
+
+.certification-image {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    transition: transform 0.5s ease; /* Smooth transition for the image */
+}
+
+.certification-card:hover .certification-image {
+    transform: scale(1.1); /* Image scale effect on hover */
+}
+
+.certification-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.certification-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsive Design for Certifications Section */
+@media screen and (max-width: 768px) {
+    .certifications-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .certification-card {
+        width: 90%; /* Full width for certification cards on small screens */
+    }
+}
+
+
+
+/* Responsive Design for Home Section */
+@media screen and (max-width: 480px) {
+    .home-container h1 {
+        font-size: 24px;
+    }
+
+    .home-container h2 {
+        font-size: 18px;
+    }
+
+    .home-image img {
+        width: 80%;
+    }
+
+    .home-text, .home-image {
+        max-width: 100%;
+    }
+
+    .home-container {
+        padding: 10px 0;
+    }
+}
+
+
+/* Footer */
+/* Message to Me Section */
+.footer{
+    text-align: center;
+}
+#message-to-me {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#message-to-me h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0073e6;
+}
+
+.message-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.message-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.message-form button {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.message-form button:hover {
+    background-color: #005bb5;
+}
